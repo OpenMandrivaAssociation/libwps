@@ -26,7 +26,7 @@ Library that handles Microsoft Works documents.
 %package tools
 Requires: %{name} = %{version}-%{release}
 Summary: Tools to transform Works documents into other formats
-Group: Applications/Publishing
+Group: Publishing
 
 %description tools
 Tools to transform Works documents into other formats.
@@ -34,7 +34,7 @@ Currently supported: html, raw, text
 
 %package -n %{lib_name}
 Summary: Library for reading and converting Microsoft Works word processor documents
-Group: System Environment/Libraries
+Group: System/Libraries
 
 %description -n %{lib_name}
 Library that handles Microsoft Works documents.
@@ -42,7 +42,7 @@ Library that handles Microsoft Works documents.
 %package -n %{lib_name_devel}
 Requires: %{name} = %{version}-%{release}
 Summary: Files for developing with libwps.
-Group: Development/Libraries
+Group: Development/C++
 
 %description -n %{lib_name_devel}
 Includes and definitions for developing with libwps.
@@ -50,7 +50,7 @@ Includes and definitions for developing with libwps.
 %package docs
 Requires: %{name}
 Summary: Documentation of libwps API
-Group: Development/Documentation
+Group: Development/C++
 
 %description docs
 Documentation of libwps API for developing with libwps
