@@ -1,4 +1,4 @@
-%define rel             1
+%define rel             2
 %define name            libwps
 %define version         0.1.0~svn20070129
 %define release         %mkrel %{rel}
