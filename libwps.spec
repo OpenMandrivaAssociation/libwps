@@ -16,6 +16,7 @@ Group: Office
 URL: http://libwps.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 License: LGPL
+BuildRequires: doxygen
 BuildRequires: libwpd-devel >= 0.8.8
 BuildRequires: glibc-devel
 
