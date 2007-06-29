@@ -1,4 +1,4 @@
-%define rel             2
+%define rel             3
 %define name            libwps
 %define version         0.1.0~svn20070129
 %define release         %mkrel %{rel}
@@ -43,6 +43,7 @@ Library that handles Microsoft Works documents.
 Summary: Files for developing with libwps.
 Group: Development/C++
 Requires: %{lib_name} = %{version}-%{release}
+Provides: libwps-devel = %{version}-%{release}
 
 %description -n %{lib_name_devel}
 Includes and definitions for developing with libwps.
