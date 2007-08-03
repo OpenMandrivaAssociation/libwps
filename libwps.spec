@@ -1,6 +1,7 @@
-%define rel             3
+%define rel             4
 %define name            libwps
-%define version         0.1.0~svn20070129
+%define ups_version     0.1.0~svn20070129
+%define version         0.1.0.svn20070129
 %define release         %mkrel %{rel}
 %define api_version     0.1
 %define lib_major       1
@@ -11,7 +12,7 @@ Name: %{name}
 Summary: Library for reading and converting Microsoft Works word processor documents
 Version: %{version}
 Release: %{release}
-Source: %{name}-%{version}.tar.gz
+Source: %{name}-%{ups_version}.tar.gz
 Group: Office
 URL: http://libwps.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
@@ -57,7 +58,7 @@ Group: Development/C++
 Documentation of libwps API for developing with libwps
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{ups_version}
 
 %build
 %configure
