@@ -1,7 +1,7 @@
 %define rel             4
 %define name            libwps
-%define ups_version     0.1.0~svn20070129
-%define version         0.1.0.svn20070129
+%define ups_version     0.1.0
+%define version         0.1.0
 %define release         %mkrel %{rel}
 %define api_version     0.1
 %define lib_major       1
@@ -10,6 +10,7 @@
 
 Name: %{name}
 Summary: Library for reading and converting Microsoft Works word processor documents
+Epoch: 1
 Version: %{version}
 Release: %{release}
 Source: %{name}-%{ups_version}.tar.gz
@@ -86,4 +87,4 @@ rm -rf %{buildroot}
 %{_includedir}/libwps-0.1/libwps
 
 %files docs
-%{_docdir}/libwps-0.1.0~svn20070129/*
+%{_docdir}/libwps-0.1.0/*
