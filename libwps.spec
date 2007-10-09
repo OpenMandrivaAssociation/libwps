@@ -42,7 +42,7 @@ Group: System/Libraries
 Library that handles Microsoft Works documents.
 
 %package -n %{lib_name_devel}
-Summary: Files for developing with libwps.
+Summary: Files for developing with libwps
 Group: Development/C++
 Requires: %{lib_name} = %{epoch}:%{version}-%{release}
 Provides: libwps-devel = %{epoch}:%{version}-%{release}
