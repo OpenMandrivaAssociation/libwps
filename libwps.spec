@@ -26,7 +26,7 @@ BuildRequires: glibc-devel
 Library that handles Microsoft Works documents.
 
 %package tools
-Requires: %{lib_name} = %{version}-%{release}
+Requires: %{lib_name} = %{epoch}:%{version}-%{release}
 Summary: Tools to transform Works documents into other formats
 Group: Publishing
 
