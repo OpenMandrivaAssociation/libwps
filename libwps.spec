@@ -1,11 +1,11 @@
-%define rel             6
+%define rel             7
 %define name            libwps
 %define ups_version     0.1.0
 %define version         0.1.0
 %define release         %mkrel %{rel}
 %define api_version     0.1
 %define lib_major       1
-%define lib_name        %mklibname wps- %{api_version} %{lib_major}
+%define lib_name        %mklibname wps %{api_version} %{lib_major}
 %define lib_name_devel  %mklibname -d wps
 
 Name: %{name}
@@ -13,7 +13,7 @@ Summary: Library for reading and converting Microsoft Works word processor docum
 Epoch: 1
 Version: %{version}
 Release: %{release}
-Source: %{name}-%{ups_version}.tar.gz
+Source: http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.tar.bz2
 Group: Office
 URL: http://libwps.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
@@ -37,6 +37,7 @@ Currently supported: html, raw, text
 %package -n %{lib_name}
 Summary: Library for reading and converting Microsoft Works word processor documents
 Group: System/Libraries
+Obsoletes: %mklibname wps- 0.1 1
 
 %description -n %{lib_name}
 Library that handles Microsoft Works documents.
