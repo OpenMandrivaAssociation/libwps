@@ -1,4 +1,4 @@
-%define rel             5
+%define rel             6
 %define name            libwps
 %define ups_version     0.1.0
 %define version         0.1.0
@@ -26,7 +26,7 @@ BuildRequires: glibc-devel
 Library that handles Microsoft Works documents.
 
 %package tools
-Requires: %{name} = %{version}-%{release}
+Requires: %{lib_name} = %{version}-%{release}
 Summary: Tools to transform Works documents into other formats
 Group: Publishing
 
@@ -51,7 +51,7 @@ Provides: libwps-devel = %{epoch}:%{version}-%{release}
 Includes and definitions for developing with libwps.
 
 %package docs
-Requires: %{name}
+Requires: %{lib_name_devel} = %{epoch}:%{version}-%{release}
 Summary: Documentation of libwps API
 Group: Development/C++
 
