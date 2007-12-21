@@ -16,6 +16,7 @@ Release: %{release}
 Source: http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.tar.bz2
 Group: Office
 URL: http://libwps.sourceforge.net/
+BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 License: LGPL
 BuildRequires: doxygen
 BuildRequires: libwpd-devel >= 0.8.8
