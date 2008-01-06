@@ -88,4 +88,4 @@ rm -rf %{buildroot}
 %{_includedir}/libwps-0.1/libwps
 
 %files docs
-%{_docdir}/libwps-0.1.0/*
+%{_docdir}/libwps-%{ups_version}/*
