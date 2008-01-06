@@ -63,7 +63,7 @@ Documentation of libwps API for developing with libwps
 %setup -q -n %{name}-%{ups_version}
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
