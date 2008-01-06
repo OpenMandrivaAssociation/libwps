@@ -1,7 +1,7 @@
-%define rel             7
+%define rel             1
 %define name            libwps
-%define ups_version     0.1.0
-%define version         0.1.0
+%define ups_version     0.1.2
+%define version         0.1.2
 %define release         %mkrel %{rel}
 %define api_version     0.1
 %define lib_major       1
@@ -13,11 +13,11 @@ Summary: Library for reading and converting Microsoft Works word processor docum
 Epoch: 1
 Version: %{version}
 Release: %{release}
-Source: http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.tar.bz2
+Source: http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.tar.gz
 Group: Office
 URL: http://libwps.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
-License: LGPL
+License: LGPLv2+
 BuildRequires: doxygen
 BuildRequires: libwpd-devel >= 0.8.8
 BuildRequires: glibc-devel
