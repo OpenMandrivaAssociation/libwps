@@ -1,4 +1,4 @@
-%define rel             2
+%define rel             3
 %define name            libwps
 %define ups_version     0.1.2
 %define version         0.1.2
