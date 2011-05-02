@@ -60,13 +60,16 @@ Documentation of libwps API for developing with libwps
 
 %prep
 %setup -q -n %{name}-%{ups_version}
+sed -i -e 's: -Wall -Werror -pedantic::' configure.in
 
 %build
-%configure2_5x
+./autogen.sh
+%configure2_5x --disable-static
 %make
 
 %install
-make install DESTDIR=%{buildroot}
+rm -fr %buildroot
+%makeinstall_std
 
 %clean
 rm -rf %{buildroot}
@@ -77,14 +80,15 @@ rm -rf %{buildroot}
 
 %files -n %{lib_name}
 %defattr(644,root,root,755)
-%{_libdir}/libwps*-0.1.so.*
+%{_libdir}/libwps*-%{api_version}.so.%{lib_major}*
 
 %files -n %{lib_name_devel}
 %defattr(644,root,root,755)
-%{_libdir}/libwps*-0.1.so
-%{_libdir}/libwps*-0.1.*a
-%{_libdir}/pkgconfig/libwps*-0.1.pc
-%{_includedir}/libwps-0.1/libwps
+%{_libdir}/libwps*-%{api_version}.so
+%{_libdir}/libwps*-%{api_version}.la
+%{_libdir}/pkgconfig/libwps*.pc
+%{_includedir}/*
 
 %files docs
-%{_docdir}/libwps-%{ups_version}/*
+%defattr(644,root,root,755)
+%{_docdir}/libwps*
