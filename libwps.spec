@@ -1,7 +1,6 @@
 %define rel             1
 %define name            libwps
-%define ups_version     0.2.0
-%define version         0.2.0
+%define version         0.2.2
 %define release         %mkrel %{rel}
 %define api_version     0.2
 %define lib_major       2
@@ -59,7 +58,7 @@ Group: Development/C++
 Documentation of libwps API for developing with libwps
 
 %prep
-%setup -q -n %{name}-%{ups_version}
+%setup -q -n %{name}-%{version}
 sed -i -e 's: -Wall -Werror -pedantic::' configure.in
 
 %build
