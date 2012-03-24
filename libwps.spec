@@ -1,30 +1,26 @@
-%define rel             1
-%define name            libwps
-%define version         0.2.2
-%define release         %mkrel %{rel}
-%define api_version     0.2
-%define lib_major       2
-%define lib_name        %mklibname wps %{api_version} %{lib_major}
-%define lib_name_devel  %mklibname -d wps
+%define api     0.2
+%define major	2
+%define libname		%mklibname wps %{api} %{major}
+%define develname	%mklibname -d wps
 
-Name: %{name}
-Summary: Library for reading and converting Microsoft Works word processor documents
-Epoch: 1
-Version: %{version}
-Release: %{release}
-Source: http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.tar.bz2
-Group: Office
-URL: http://libwps.sourceforge.net/
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
-License: LGPLv2+
+Summary:	Library for reading and converting Microsoft Works word processor documents
+Name:		libwps
+Epoch:		1
+Version:	0.2.4
+Release:	1
+Group:		Office
+License: 	LGPLv2+
+URL: 		http://libwps.sourceforge.net/
+Source0:	http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.tar.xz
+
 BuildRequires: doxygen
-BuildRequires: libwpd-devel >= 0.9.0
+BuildRequires: pkgconfig(libwpd-0.9)
 
 %description
 Library that handles Microsoft Works documents.
 
 %package tools
-Requires: %{lib_name} = %{epoch}:%{version}-%{release}
+Requires: %{libname} = %{EVRD}
 Summary: Tools to transform Works documents into other formats
 Group: Publishing
 
@@ -32,25 +28,25 @@ Group: Publishing
 Tools to transform Works documents into other formats.
 Currently supported: html, raw, text
 
-%package -n %{lib_name}
+%package -n %{libname}
 Summary: Library for reading and converting Microsoft Works word processor documents
 Group: System/Libraries
 Obsoletes: %mklibname wps- 0.1 1
 
-%description -n %{lib_name}
+%description -n %{libname}
 Library that handles Microsoft Works documents.
 
-%package -n %{lib_name_devel}
+%package -n %{develname}
 Summary: Files for developing with libwps
 Group: Development/C++
-Requires: %{lib_name} = %{epoch}:%{version}-%{release}
-Provides: libwps-devel = %{epoch}:%{version}-%{release}
+Requires: %{libname} = %{EVRD}
+Provides: libwps-devel = %{EVRD}
 
-%description -n %{lib_name_devel}
+%description -n %{develname}
 Includes and definitions for developing with libwps.
 
 %package docs
-Requires: %{lib_name_devel} = %{epoch}:%{version}-%{release}
+Requires: %{develname} = %{EVRD}
 Summary: Documentation of libwps API
 Group: Development/C++
 
@@ -58,36 +54,28 @@ Group: Development/C++
 Documentation of libwps API for developing with libwps
 
 %prep
-%setup -q -n %{name}-%{version}
-sed -i -e 's: -Wall -Werror -pedantic::' configure.in
+%setup -q
 
 %build
-./autogen.sh
-%configure2_5x --disable-static
+%configure2_5x \
+	--disable-static
+
 %make
 
 %install
-rm -fr %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files tools
-%defattr(755,root,root,755)
 %{_bindir}/wps2*
 
-%files -n %{lib_name}
-%defattr(644,root,root,755)
-%{_libdir}/libwps*-%{api_version}.so.%{lib_major}*
+%files -n %{libname}
+%{_libdir}/libwps-%{api}.so.%{major}*
 
-%files -n %{lib_name_devel}
-%defattr(644,root,root,755)
-%{_libdir}/libwps*-%{api_version}.so
-%{_libdir}/libwps*-%{api_version}.la
+%files -n %{develname}
+%{_libdir}/libwps*-%{api}.so
 %{_libdir}/pkgconfig/libwps*.pc
 %{_includedir}/*
 
 %files docs
-%defattr(644,root,root,755)
 %{_docdir}/libwps*
+
