@@ -15,6 +15,7 @@ Source0:	http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.ta
 
 BuildRequires: doxygen
 BuildRequires: pkgconfig(libwpd-0.9)
+BuildRequires: boost-devel
 
 %description
 Library that handles Microsoft Works documents.
