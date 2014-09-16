@@ -1,13 +1,13 @@
-%define api	0.2
-%define major	2
+%define api	0.3
+%define major	3
 %define libname	%mklibname wps %{api} %{major}
 %define devname	%mklibname -d wps
 
 Summary:	Library for reading and converting Microsoft Works word processor documents
 Name:		libwps
 Epoch:		1
-Version:	0.2.9
-Release:	7
+Version:	0.3.0
+Release:	1
 Group:		Office
 License:	LGPLv2+
 Url:		http://libwps.sourceforge.net/
@@ -15,7 +15,8 @@ Source0:	http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.ta
 
 BuildRequires:	doxygen
 BuildRequires:	boost-devel
-BuildRequires:	pkgconfig(libwpd-0.9)
+BuildRequires:	pkgconfig(libwpd-0.10)
+BuildRequires:	pkgconfig(librevenge-0.0)
 
 %description
 Library that handles Microsoft Works documents.
@@ -59,6 +60,7 @@ Includes and definitions for developing with libwps.
 
 %files tools
 %{_bindir}/wps2*
+%{_bindir}/wks2*
 
 %files -n %{libname}
 %{_libdir}/libwps-%{api}.so.%{major}*
