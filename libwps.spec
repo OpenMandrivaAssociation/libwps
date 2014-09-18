@@ -15,7 +15,6 @@ Source0:	http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.ta
 
 BuildRequires:	doxygen
 BuildRequires:	boost-devel
-BuildRequires:	pkgconfig(libwpd-0.10)
 BuildRequires:	pkgconfig(librevenge-0.0)
 
 %description
