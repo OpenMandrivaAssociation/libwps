@@ -1,13 +1,13 @@
-%define api	0.3
-%define major	3
+%define api	0.4
+%define major	4
 %define libname	%mklibname wps %{api} %{major}
 %define devname	%mklibname -d wps
 
 Summary:	Library for reading and converting Microsoft Works word processor documents
 Name:		libwps
 Epoch:		1
-Version:	0.3.0
-Release:	2
+Version:	0.4.0
+Release:	1
 Group:		Office
 License:	LGPLv2+
 Url:		http://libwps.sourceforge.net/
