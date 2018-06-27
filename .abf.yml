@@ -1,9 +1,2 @@
-removed_sources:
-  libwps-0.2.7.tar.xz: d26cbec758be1b555ef48fc73ef87186126c8d74
-  libwps-0.2.9.tar.xz: a7892c56d40043a6efbb8b1543b2353668d31ccc
-  libwps-0.3.0.tar.xz: e969093fa3beb00ade2869560a1d495e5417a9e2
-  libwps-0.4.0.tar.xz: 3157d73d0ea2fe731dc7316e3a40eb8e4fdee591
-  libwps-0.4.1.tar.xz: 28f022ceae4ba7c4cbea9bba3c18466b2144a309
-  libwps-0.4.2.tar.xz: 7ab60fba240844be3bf675059f82eddc85bbe922
 sources:
-  libwps-0.4.8.tar.xz: cd0a38f937efd13b3ffd508f710a512cf8abbfd5
+  libwps-0.4.9.tar.xz: d0d7dd91f16213a51ea4b24b799f844cb7a08892
