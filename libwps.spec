@@ -6,8 +6,8 @@
 Summary:	Library for reading and converting Microsoft Works word processor documents
 Name:		libwps
 Epoch:		1
-Version:	0.4.10
-Release:	2
+Version:	0.4.11
+Release:	1
 Group:		Office
 License:	LGPLv2+
 Url:		http://libwps.sourceforge.net/
@@ -52,10 +52,10 @@ Includes and definitions for developing with libwps.
 CFLAGS="%{optflags} -Qunused-arguments" \
 CXXFLAGS="%{optflags} -Qunused-arguments" \
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files tools
 %{_bindir}/wps2*
@@ -69,4 +69,3 @@ CXXFLAGS="%{optflags} -Qunused-arguments" \
 %{_libdir}/pkgconfig/libwps*.pc
 %{_includedir}/*
 %doc %{_docdir}/libwps*
-
