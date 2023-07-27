@@ -6,8 +6,8 @@
 Summary:	Library for reading and converting Microsoft Works word processor documents
 Name:		libwps
 Epoch:		1
-Version:	0.4.12
-Release:	2
+Version:	0.4.14
+Release:	1
 Group:		Office
 License:	LGPLv2+
 Url:		http://libwps.sourceforge.net/
