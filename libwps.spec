@@ -10,7 +10,7 @@ Version:	0.4.14
 Release:	1
 Group:		Office
 License:	LGPLv2+
-Url:		http://libwps.sourceforge.net/
+Url:		https://libwps.sourceforge.net/
 Source0:	http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.tar.xz
 
 BuildRequires:	doxygen
