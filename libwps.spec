@@ -13,6 +13,11 @@ License:	LGPLv2+
 Url:		https://libwps.sourceforge.net/
 Source0:	http://nchc.dl.sourceforge.net/sourceforge/libwps/%{name}-%{version}.tar.xz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(librevenge-0.0)
